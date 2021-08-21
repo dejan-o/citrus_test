@@ -1,0 +1,9 @@
+@import './style/reset.scss';
+@import './style/box-sizing.scss';
+@import './style/config.scss';
+
+
+body {
+    color: map-get($color-palette, text-color);
+    font-family: $font-family;
+}
