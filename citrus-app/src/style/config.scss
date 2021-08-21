@@ -4,6 +4,8 @@ $color-palette: (
     background-yellow: #F5DF4E,
     background-grey: #F0F0F0,
     user-box-background: #F0F0F0,
+    user-box-backgorund-active: #89ACD2,
+    user-box-text-active: #F5DF4E,
     todo-item-background: #E7E7E7,
     checkbox-border: #E7E7E7,
     todo-menu-item-active: #F5DF4E,
@@ -25,7 +27,8 @@ $font-sizes: (
 
 $font-family: 'Roboto', sans-serif;
 
-
+$row-max-width: 1280px;
+$row-min-width: 1024px;
 
 
 

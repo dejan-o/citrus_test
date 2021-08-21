@@ -1,0 +1,21 @@
+@import '../../style/config.scss';
+
+.user-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($color-palette, user-box-background);
+    max-width: 210px;
+    min-width: fit-content;
+    text-align: center;
+    line-height: map-get($line-height-styles, sm);
+    font-size: map-get($font-sizes, smd);
+    border-radius: 10px;
+    height: 100px;
+    cursor: pointer;
+
+    &--active {
+        background-color: map-get($color-palette, user-box-backgorund-active);
+        color: map-get($color-palette, user-box-text-active);
+    }
+}
