@@ -1,0 +1,14 @@
+.icon {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+$icon-file-names: (
+    check,
+);
+
+@each $icon-name in $icon-file-names {
+    .#{icon-name} {
+        background-image: url('../../assets/icons/#{$icon-name}.svg');
+    }
+}
