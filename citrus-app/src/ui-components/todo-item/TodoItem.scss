@@ -20,6 +20,7 @@
         justify-content: center;
         align-items: center;
         margin-right: 30px;
+
     }
 
     &__text {
@@ -34,6 +35,7 @@
 
     @media screen and(max-width: '480px'){
         padding: 15px;
+        font-size: 14px;
     }
 
 }

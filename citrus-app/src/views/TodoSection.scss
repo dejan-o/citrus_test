@@ -15,6 +15,10 @@
             line-height: map-get($line-height-styles, lg);
             text-transform: uppercase;
             margin-bottom: 10px;
+
+            @media screen and(max-width: '480px'){
+                font-size: 24px;
+             }
         }
 
         &__menu {

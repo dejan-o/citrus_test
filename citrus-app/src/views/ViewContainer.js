@@ -9,6 +9,8 @@ const ViewContainer = () => {
     const [users, setUsers] = useState(null);
     const [todos, setTodos] = useState(null);
     const [activeUserId, setActiveUserId] = useState(null);
+
+    const renderLoadScreen = !users || !(typeof users === 'object') || !Object.values(users).length;
     
     useEffect(() => {
         fetchRequest('https://jsonplaceholder.typicode.com/users', (data) => {
@@ -41,12 +43,12 @@ const ViewContainer = () => {
 
     return (
         <div className='view-container'>
-            { users ?
+            { !renderLoadScreen ?
             <UsersSection users={Object.values(users)} setActiveUser={setActiveUserId} activeUserId={activeUserId}/>
             :
             <LoadingScreen />
             }
-            { todos &&
+            { todos && !!todos.length &&
             <TodoSection todos={todos} user={users[activeUserId]} />
             }
         </div>
