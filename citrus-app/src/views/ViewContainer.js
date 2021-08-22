@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import LoadingScreen from '../ui-components/loading-screen/LoadingScreen';
+import TodoSection from './TodoSection';
 import UsersSection from './UsersSection';
 
 const ViewContainer = () => {
@@ -13,7 +14,11 @@ const ViewContainer = () => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then( res => res.json())
         .then( data => {
-            setUsers(data);
+            const usersData = data.reduce( (usersMap, current) => {
+                usersMap[current.id] = current;
+                return usersMap;
+            }, {});
+            setUsers(usersData);
             setError(false);
         })
         .catch( error => setError(true));
@@ -40,9 +45,12 @@ const ViewContainer = () => {
     return (
         <div className='view-container'>
             { users ?
-            <UsersSection users={users} setActiveUser={setActiveUserId} activeUserId={activeUserId}/>
+            <UsersSection users={Object.values(users)} setActiveUser={setActiveUserId} activeUserId={activeUserId}/>
             :
             <LoadingScreen />
+            }
+            { todos &&
+            <TodoSection todos={todos} user={users[activeUserId]} />
             }
         </div>
     )

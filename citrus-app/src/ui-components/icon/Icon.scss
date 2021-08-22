@@ -1,14 +1,10 @@
 .icon {
     background-position: center;
     background-repeat: no-repeat;
+    width: 25px;
+    height: 18px;
 }
 
-$icon-file-names: (
-    check,
-);
-
-@each $icon-name in $icon-file-names {
-    .#{icon-name} {
-        background-image: url('../../assets/icons/#{$icon-name}.svg');
-    }
+.icon-check {
+    background-image: url('../../assets/icons/check.svg');
 }

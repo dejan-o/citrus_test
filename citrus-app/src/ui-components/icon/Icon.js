@@ -3,7 +3,7 @@ import './Icon.scss';
 
 const Icon = ({iconName}) => {
     return (
-        <div className={`icon ${iconName}`}/>
+        <div className={`icon icon-${iconName}`}/>
     )
 }
 

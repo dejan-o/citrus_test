@@ -1,0 +1,30 @@
+@import '../style/config.scss';
+
+.todos-section {
+    padding: 80px 0;
+    background-color: map-get($color-palette, background-grey);
+
+    &__header {
+        display: flex;
+        width: 100%;
+        margin-bottom: 26px;
+
+        &__title {
+            font-size: map-get($font-sizes, lg);
+            font-weight: 500;
+            line-height: map-get($line-height-styles, lg);
+            text-transform: uppercase;
+        }
+
+        &__menu {
+            margin-left: auto;
+            display: flex;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
