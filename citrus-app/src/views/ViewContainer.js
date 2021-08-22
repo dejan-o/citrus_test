@@ -27,7 +27,6 @@ const ViewContainer = () => {
     useEffect( () => {
         let active = true;
         if(activeUserId){
-            setTodos(null);
             fetchRequest(`https://jsonplaceholder.typicode.com/todos?userId=${activeUserId}`, (data)=> {
                 if(active){
                     setTodos(data);

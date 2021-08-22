@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './TodoSection.scss';
 import TodoItem from '../ui-components/todo-item/TodoItem';
 import TodoMenuItem from '../ui-components/todo-menu-item/TodoMenuItem';
@@ -11,6 +11,10 @@ const TodoSection = ({todos, user}) => {
 
    const [shownTodos, setShownTodos] = useState(todos);
     const [activeMenuItem, setActiveMenuItem] = useState(1);
+
+    useEffect(() => {
+        setShownTodos(todos);
+    }, [todos])
 
     const allTodos = {
         id: 1,
