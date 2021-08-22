@@ -10,6 +10,10 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    @media screen and(max-width: '480px'){
+        font-size: 11px; 
+     }
     
     &--active {
         background-color: map-get($color-palette, todo-menu-item-active);
@@ -18,5 +22,18 @@
 
     &:not(:last-child) {
         margin-right: 30px;
+
+        @media screen and (max-width: '480px'){
+            margin-right: 6px; 
+         }
     }
+
+    @media screen and(max-width: '900px'){
+       flex-grow: 1; 
+    }
+
+    @media screen and (max-width: '480px'){
+        width: 95px;
+     }
+    
 }

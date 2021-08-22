@@ -1,6 +1,7 @@
 @import '../../style/config.scss';
 
 .user-box {
+    padding: 38px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,5 +19,11 @@
     &--active {
         background-color: map-get($color-palette, user-box-backgorund-active);
         color: map-get($color-palette, user-box-text-active);
+    }
+
+    @media screen and (max-width:'480px'){
+        padding: 10px;
+        font-size: 12px;
+        line-height: unset;
     }
 }
